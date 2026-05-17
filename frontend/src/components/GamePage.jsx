@@ -26,7 +26,7 @@ export default function GamePage({ puzzle, gameState, setGameState }) {
       });
     }, 1000);
     return () => clearInterval(timerRef.current);
-  }, [solved]);
+  }, [solved, setGameState, today]);
 
   // ── Tile interaction ─────────────────────────────────────────────────────
   const handleTileClick = useCallback((idx) => {
@@ -58,7 +58,7 @@ export default function GamePage({ puzzle, gameState, setGameState }) {
       setTimeout(() => setInvalidIdx(null), 400);
       setSelected(idx);
     }
-  }, [selected, board, swaps, elapsed, solved, today]);
+  }, [selected, board, swaps, elapsed, solved, today, setGameState]);
 
   // ── Guard ────────────────────────────────────────────────────────────────
   if (!puzzle) return (

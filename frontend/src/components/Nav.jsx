@@ -1,4 +1,4 @@
-import { s, C } from "../styles/theme";
+import { s } from "../styles/theme";
 
 export default function Nav({ page, setPage }) {
   return (
