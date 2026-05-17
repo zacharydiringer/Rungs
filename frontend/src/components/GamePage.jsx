@@ -109,20 +109,6 @@ export default function GamePage({ puzzle, gameState, setGameState }) {
           ))}
         </div>
 
-        {/* ── Row labels ───────────────────────────────────────────────── */}
-        <div style={{
-          display: "grid", gridTemplateColumns: "1fr 1fr",
-          gap: 8, paddingLeft: 16, paddingRight: 16, marginBottom: 20,
-        }}>
-          {[[1,2],[3,4],[5,6],[7,8]].map(([a, b], i) => (
-            <div key={i} style={{
-              fontSize: 11, color: C.muted, textAlign: "center",
-            }}>
-              Goal: [{a}, {b}]
-            </div>
-          ))}
-        </div>
-
         {/* ── Swap counter ─────────────────────────────────────────────── */}
         <SwapBar swaps={swaps} par={puzzle.min_swaps} />
 
